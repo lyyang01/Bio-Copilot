@@ -1,4 +1,4 @@
-# Bio-MAS
+# DII-MAS
 
 <div align=center>
 <img src="assets/mas.png" width = "540" alt="mas" align=center />
