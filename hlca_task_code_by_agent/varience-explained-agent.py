@@ -44,7 +44,7 @@ unique_clusters = ['whole_atlas'] + list(adata.obs['cluster_level_3'].unique())
 skip = []
 # Loop through clusters including 'whole_atlas'
 for cluster in unique_clusters:
-    #TODO
+
     if cluster == "whole_atlas":
         subadata = adata.copy()
         verbose = True
@@ -62,17 +62,16 @@ for cluster in unique_clusters:
     # For 'whole_atlas', consider all samples; otherwise, filter by the current cluster
     if cluster == 'whole_atlas':
         cluster_samples = adata.obs['sample']
-        #TODO
-        temp = adata.copy()
+        subdata = adata.copy()
         
     else:
         cluster_samples = adata.obs[adata.obs['cluster_level_3'] == cluster]['sample']
-        temp = adata[adata.obs['cluster_level_3'] == cluster, :].copy()
+        subdata = adata[adata.obs['cluster_level_3'] == cluster, :].copy()
         
     for sample in cluster_samples.unique():
         # Filter data for the current sample
         
-        sample_data = temp[temp.obs['sample']==sample]
+        sample_data = subdata[subdata.obs['sample']==sample]
         # Use n_cells to filter out samples containing less than 10 cells
         
         if len(sample_data.obs['sample']) < 10:
@@ -123,7 +122,6 @@ for cluster in unique_clusters:
         cluster_samples_data.append(aggregated_row)
     
     # Convert the list of dictionaries to a DataFrame
-    #TODO
     if len(cluster_samples_data) >= 2:
     #if cluster_samples_data:  # Check if the list is not empty
         cluster_df = pd.DataFrame(cluster_samples_data)
@@ -171,7 +169,6 @@ covariates = ['log10_total_counts', 'mito_frac', 'n_cells', 'dataset',
 
 
 # B. Performing Variance Analysis at Cluster Level
-#TODO
 # 1. Iterate Over Clusters
 for cluster, df in cluster_dataframes.items():
     X_columns = covariates  # Directly use covariates
@@ -186,22 +183,14 @@ for cluster, df in cluster_dataframes.items():
         for x_col in X_columns:
             X = df[[x_col]].dropna()  # Predictor: each metadata covariate, dropping rows with NAN in X
             
-            #TODO
-            if X.shape[0] < 2:
-                continue
             # Continue processing X's string values
-            #TODO
             if X[x_col].dtype == 'object':
                 X = pd.get_dummies(X[x_col])
             
             if X.shape[0] > 1 and Y.shape[0] > 0:  # Ensure both X and Y have data
                 model = LinearRegression()                
                 Y_ = Y.loc[X.index]
-                try:
-                    model.fit(X, Y_)
-                except:
-                    import pdb
-                    pdb.set_trace()
+                model.fit(X, Y_)
                 Y_pred = model.predict(X)
                 
                 variance_explained = np.var(Y_pred, ddof=1)
