@@ -8,7 +8,7 @@ import scanpy as sc
 import os
 
 # Define the file path for the .h5ad file
-file_path = '/data/yangliu/llm-agent/data/integrated_dataset_copy.h5ad'
+file_path = '../data/integrated_dataset_copy.h5ad'
 # Check if the file exists before proceeding
 if os.path.exists(file_path):
     # Loading the Dataset

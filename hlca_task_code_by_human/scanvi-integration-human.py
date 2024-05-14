@@ -11,9 +11,9 @@ import torch
 torch.set_printoptions(precision=3, sci_mode=False, edgeitems=7)
 os.environ['CUDA_VISIBLE_DEVICES'] = '1'
 
-path_HLCA_unintegrated = "../../data/output/HLCA_v1_intermediates/LCA_Bano_Barb_Jain_Kras_Lafy_Meye_Mish_MishBud_Nawi_Seib_Teic_log1p.h5ad"
-path_HLCA_unintegrated_prepped = "../../data/output/HLCA_v1_intermediates/HLCA_v1_scANVI_input.h5ad"
-dir_out = "../../data/scANVI_integration"
+path_HLCA_unintegrated = "../data/LCA_Bano_Barb_Jain_Kras_Lafy_Meye_Mish_MishBud_Nawi_Seib_Teic_scanvi_label.h5ad"
+#path_HLCA_unintegrated_prepped = "../data/HLCA_v1_scANVI_input.h5ad"
+dir_out = "../data/scANVI_integration"
 
 adata = sc.read(path_HLCA_unintegrated)
 adata_ori = adata.copy()
@@ -89,4 +89,4 @@ reference_latent.obs.index = adata.obs.index
 
 reference_latent.write(os.path.join(dir_out, "scANVI_embedding.h5ad"))
 adata_ori.obsm['X_scanvi_emb'] = vae.get_latent_representation()
-adata_ori.write("../../data/output/HLCA_v1_intermediates/LCA_Bano_Barb_Jain_Kras_Lafy_Meye_Mish_MishBud_Nawi_Seib_Teic_log1p_scanvi_embedding.h5ad")
+adata_ori.write("../data/LCA_Bano_Barb_Jain_Kras_Lafy_Meye_Mish_MishBud_Nawi_Seib_Teic_log1p_scanvi_embedding.h5ad")

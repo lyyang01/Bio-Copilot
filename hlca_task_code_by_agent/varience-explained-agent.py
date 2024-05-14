@@ -10,7 +10,7 @@ import scanpy as sc
 import os
 
 # Set File Path
-file_path = '/data/yangliu/llm-agent/data/final_adata_with_subclusters.h5ad'
+file_path = '../data/final_adata_with_subclusters.h5ad'
 
 # Check if the file exists before proceeding
 if os.path.exists(file_path):

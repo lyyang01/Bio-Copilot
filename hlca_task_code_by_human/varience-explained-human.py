@@ -22,9 +22,9 @@ import warnings
 warnings.filterwarnings("ignore")
 
 #path_HLCA = "../../data/HLCA_core_h5ads/HLCA_v2.h5ad"
-path_HLCA = "../../data/output/HLCA_v2_intermediates/LCA_Bano_Barb_Jain_Kras_Lafy_Meye_Mish_MishBud_Nawi_Seib_Teic_log1p.h5ad"
-dir_results = "../../data/results/variance_explained_by_covariates/"
-dir_figures = "../../data/results/figures/"
+path_HLCA = "../data/HLCA_v2_intermediates/LCA_Bano_Barb_Jain_Kras_Lafy_Meye_Mish_MishBud_Nawi_Seib_Teic_log1p.h5ad"
+dir_results = "../data/results/variance_explained_by_covariates/"
+dir_figures = "../data/results/figures/"
 
 adata = sc.read(path_HLCA)
 covariates = [

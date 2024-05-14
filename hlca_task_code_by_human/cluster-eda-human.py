@@ -228,11 +228,11 @@ def get_cluster_markers(adata, cluster_label, marker_ref, ngenes=100, verbose=Tr
     return cluster_markers
 
 dir_benchmarking_res = (
-    "../../results/integration_benchmarking/benchmarking_results/integration/"
+    "../data/results/integration_benchmarking/benchmarking_results/integration/"
 )
-dir_benchmarking_cluster_output = "../../results/integration_benchmarking/clustering/"
-path_HLCA = "../../data/output/HLCA_v1_intermediates/LCA_Bano_Barb_Jain_Kras_Lafy_Meye_Mish_MishBud_Nawi_Seib_Teic_log1p_scanvi_embedding_all.h5ad"
-dir_HLCA_cluster_output = "../../data/results/DEAs/leiden_v3/"
+dir_benchmarking_cluster_output = "../data/results/integration_benchmarking/clustering/"
+path_HLCA = "../data/LCA_Bano_Barb_Jain_Kras_Lafy_Meye_Mish_MishBud_Nawi_Seib_Teic_log1p_scanvi_embedding.h5ad"
+dir_HLCA_cluster_output = "../data/results/DEAs/leiden_v3/"
 
 dataset_name = "HLCA"
 number_of_clust_levels = 4
@@ -331,3 +331,5 @@ for clustering_level in range(1, number_of_clust_levels + 1):
             marker_gene_df.to_csv(
                 os.path.join(dir_HLCA_cluster_output, f"LCA_{cluster_name}_marker_genes_versus_{marker_ref}.csv")
             )
+
+adata.write("../data/HLCA_v2_intermediates/LCA_Bano_Barb_Jain_Kras_Lafy_Meye_Mish_MishBud_Nawi_Seib_Teic_log1p.h5ad")

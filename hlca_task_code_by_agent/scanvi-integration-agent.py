@@ -31,10 +31,10 @@ early_stopping_kwargs_scanvi = {
 }
 
 # Check if the integrated dataset file already exists
-output_file_path = '/data/yangliu/llm-agent/data/integrated_dataset_scANVI.h5ad'
+output_file_path = '../data/integrated_dataset_scANVI.h5ad'
 if not os.path.exists(output_file_path):
     # Load the dataset
-    adata = sc.read_h5ad('/data/yangliu/llm-agent/data/LCA_Bano_Barb_Jain_Kras_Lafy_Meye_Mish_MishBud_Nawi_Seib_Teic_scanvi_label.h5ad')
+    adata = sc.read_h5ad('../data/LCA_Bano_Barb_Jain_Kras_Lafy_Meye_Mish_MishBud_Nawi_Seib_Teic_scanvi_label.h5ad')
     
     # Subset data to highly variable genes
     adata = adata[:, adata.var.highly_variable]
@@ -75,7 +75,7 @@ else:
     print(f"Integrated dataset file already exists at {output_file_path}. Skipping data integration step.")
 
 ##
-adata_ori = sc.read_h5ad('/data/yangliu/llm-agent/data/LCA_Bano_Barb_Jain_Kras_Lafy_Meye_Mish_MishBud_Nawi_Seib_Teic_scanvi_label.h5ad')
+adata_ori = sc.read_h5ad('../data/LCA_Bano_Barb_Jain_Kras_Lafy_Meye_Mish_MishBud_Nawi_Seib_Teic_scanvi_label.h5ad')
 adata = sc.read_h5ad(output_file_path)
 adata_ori.obsm['X_scANVI'] = adata.obsm['X_scANVI']
-adata_ori.write('/data/yangliu/llm-agent/data/integrated_dataset_copy.h5ad')
+adata_ori.write('../data/integrated_dataset_copy.h5ad')
