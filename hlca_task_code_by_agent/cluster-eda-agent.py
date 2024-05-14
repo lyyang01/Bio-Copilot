@@ -128,8 +128,6 @@ for level, clusters in unique_clusters.items():
             #if mark_ref == 'all' and level=='cluster_level_2':
             #    continue
             for cluster in clusters:
-                #TODO
-                print(cluster)
                 # Determine the cluster depth
                 cluster_depth = cluster.count('_') + 1
                 
@@ -151,7 +149,6 @@ for level, clusters in unique_clusters.items():
                 
                 # Calculate marker genes
                 sc.tl.rank_genes_groups(adata, groupby=level, groups=fine_grained_clusters, method='t-test', n_genes=100)
-                #TODO
                 sc.tl.filter_rank_genes_groups(adata, min_in_group_fraction=0.25, max_out_group_fraction=0.5, min_fold_change=1)
                
                 # Extract and merge marker genes results
