@@ -21,5 +21,5 @@
 </div>
 
 ## 📚 Data
-Check [HLCA dataset]() for the data used in the scANVI integration step.
+Check [HLCA dataset](https://zenodo.org/records/11210015) for the data used in the scANVI integration step.
 
