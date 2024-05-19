@@ -101,8 +101,6 @@ for level in range(1, 5):
     
     # Iterate through each cluster within the current level
     for cluster in unique_clusters:
-        #TODO
-        print(cluster)
         # Determine the cluster's depth and its parent cluster, if applicable
         cluster_depth = cluster.count('-') + 1
         parent_cluster = '-'.join(cluster.split('-')[:-1]) if cluster_depth > 1 else None
