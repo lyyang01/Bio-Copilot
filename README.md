@@ -21,5 +21,6 @@
 </div>
 
 ## 📚 Data
-Check [HLCA dataset](https://zenodo.org/records/11210015) for the data used in the scANVI integration step.
+- Check [HLCA dataset](https://zenodo.org/records/11210015) for the data used in the scANVI integration step.
+- Other data used for the cell annotation step is in the 'data' folder.
 
