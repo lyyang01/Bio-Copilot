@@ -1,6 +1,6 @@
 #user input
 Perform multi-level clustering of the cells in the HLCA. Note that counting the initial clustering, the total number of clustering levels is 4. For the final HLCA, you also need calculate marker genes for every clustering.
-/data/yangliu/llm-agent/data/integrated_dataset_copy.h5ad: the integrated single-cell data with scANVI that needed to be multi-level clustered. The integrated representations is in "X_scANVI" of the adata.
+../data/integrated_dataset_copy.h5ad: the integrated single-cell data with scANVI that needed to be multi-level clustered. The integrated representations is in "X_scANVI" of the adata.
 
 
 Step 2
