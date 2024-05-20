@@ -1,0 +1,38 @@
+#user input
+Perform multi-level clustering of the cells in the HLCA. Note that counting the initial clustering, the total number of clustering levels is 4. For the final HLCA, you also need calculate marker genes for every clustering.
+/data/yangliu/llm-agent/data/integrated_dataset_copy.h5ad: the integrated single-cell data with scANVI that needed to be multi-level clustered. The integrated representations is in "X_scANVI" of the adata.
+
+
+Step 2
+#coder
+Do not import scvi and ignore optional part
+set resolution and n_neighbors as 0.01 and 30
+
+Step 3
+#coder
+set resolution = 0.1 at all levels and n_neighbors = 30
+you also need to save cluster results to a csv file for each cluster level
+
+#coder 2
+generate new sub-clustering labels for each cluster and update dataset with new sub-cluster labels
+check if the final h5ad file exists before the loop.
+
+Step 4
+#refined planner
+there are still three points that should be included in the refined plan:
+(1) when you calculate marker genes, you need first obtain the cluster depth of the current cluster. If the cluster depth is more than 1, you need also provide groups parameter in sc.tl.rank_genes_groups function.  To get groups parameter, you need first get the parent cluster name of the current cluster. For example, if the current cluster is 0-1, the parent cluster will be 0, then groups will be [0-1, 0-2, 0-3, ...].
+(2) after calculating marker genes, you also need to do filter with sc.tl.filter_rank_genes_groups.
+(3) you need to caculate marker genes from 'sister' and 'all' views.  "all" is a standard computational logic. "sister" refers to the situation where when the cluster depth is greater than 1, you need to use the clusters within groups as adata to calculate marker genes.
+
+#coder
+when you calculate for 'sister', you need to use clusters within groups as dataset to calculate marker genes.
+save final results in "cluster_level_*" units, which means you need to do essential merging operations in the second loop.
+
+#coder
+you need save csv file in each level
+you also need to save cluster information into csv files
+
+#coder
+set n_genes=100 in sc.tl.rank_genes_groups
+
+
