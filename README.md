@@ -4,7 +4,7 @@
 <img src="assets/mas.png" width = "540" alt="mas" align=center />
 </div>
 
-⚡DII-MAS is a project that provides an available multi-agent system for life sciences under a data-intelligence-intensive scientific research paradigm.⚡ [[Paper Link]]()
+⚡DII-MAS is a project that provides an available multi-agent system for life sciences under a data-intelligence-intensive scientific research paradigm.⚡ [[Paper Link]](https://doi.org/10.1101/2024.05.19.594895)
 
 ## ✨ Latest News
 - About codes of DII-MAS. We are preparing for the code release, which will be available in the future!
