@@ -23,4 +23,4 @@ Bio-Copilot is a project that provides an available multi-agent system for large
 - Other data used for the cell annotation step is in the 'data' folder.
 
 ## Usage
-code and usage will be updated in a few days.
+code and usage will be updated in this week.
