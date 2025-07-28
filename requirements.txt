@@ -1,0 +1,8 @@
+python==3.11.7
+chainlit==1.0.400
+pyautogen==0.2.27
+openai==1.47.0
+jupyter==1.0.0
+httpx==0.23.0
+jupyterlab==4.0.12
+notebook==7.0.8
