@@ -6,3 +6,4 @@ jupyter==1.0.0
 httpx==0.23.0
 jupyterlab==4.0.12
 notebook==7.0.8
+jupyter_kernel_gateway==3.0.1
