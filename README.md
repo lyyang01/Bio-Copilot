@@ -32,7 +32,7 @@ In the codebase, main_biocopilot.py is the primary entry point. The groupchats d
 
 We hope this open-source release will assist researchers who extend or study agent systems built on AutoGEN.
 
-
+Code will be updated soon.
 
 ## UI
 The ui of Bio-Copilot is shown as the following:
