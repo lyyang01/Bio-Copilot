@@ -1,0 +1,7 @@
+                 Considerations CellMarker Decoupler PanglaoDB CellTypist Seurat
+            Programmig language          R    python         R     python      R
+  Method runs with cell markers       True      True      True        NaN    NaN
+           Degree of automation        NaN       NaN       NaN        NaN    NaN
+Whether the efficiency is fast         NaN      True       NaN        NaN    NaN
+                    Ease of use        NaN      True       NaN        NaN    NaN
+                    Flexibility        NaN      True       NaN        NaN   True

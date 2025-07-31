@@ -1,0 +1,27 @@
+**Cell Annotation Methods**
+Considerations	CellMarker	Decoupler	PanglaoDB	CellTypist	Seurat
+Programmig_language										R				python									R					python						R
+Method_runs_with_cell_markers							True						True						True								NaN				NaN
+Degree_of_automation								NaN							NaN							NaN								NaN				NaN
+Whether_the_efficiency_is_fast									NaN						True							NaN								NaN				NaN
+Ease_of_use								NaN						True							NaN								NaN				NaN
+Flexibility								NaN						True							NaN								NaN			True
+
+
+**Cell Integration Methods**
+Considerations		scANVI		Scanorama(embed)								scVI	FastMNN(embed)					scGen			Harmony			FastMNN(gene)	Seurat-v3(PRCA)	BBKNN			Scanorama(gene)	ComBat		MNN					Seurat-v3(CCA)		trVAE			Conos			DESC				LIGER			SAUCIE(embed)			SAUCIE(gene)
+Programmig_language	python										python	python													R	python							R												R														R	python									python	python/R	python/R													R	python					R	python					R							python						python
+Method_runs_with_cell_annotations				True													NaN				NaN											NaN			True					NaN										NaN												NaN				NaN												NaN						NaN						NaN											NaN				NaN			NaN				NaN			NaN										NaN									NaN
+Consistent_top_performer			True												True			True											NaN			True					NaN										NaN												NaN				NaN												NaN						NaN						NaN											NaN				NaN			NaN				NaN			NaN										NaN									NaN
+Top_method_on_small/simple_tasks				NaN												True				NaN										True			True				True										NaN												NaN				NaN												NaN						NaN						NaN											NaN				NaN			NaN				NaN			NaN										NaN									NaN
+Top_method_on_large/complex_tasks			True												True			True											NaN			True					NaN										NaN												NaN				NaN												NaN						NaN						NaN											NaN				NaN			NaN				NaN			NaN										NaN									NaN
+Top_method_on_ATAC_data				NaN													NaN				NaN											NaN				NaN				True										NaN												NaN				NaN												NaN						NaN						NaN											NaN				NaN			NaN				NaN			NaN										NaN									NaN
+Integrates_strong_batch_effects			True													NaN				NaN											NaN			True					NaN										NaN												NaN				NaN												NaN						NaN						NaN											NaN				NaN			NaN				NaN			NaN										NaN									NaN
+Top_method_for_recovery_cell_states_or_modules			True												True				NaN											NaN				NaN					NaN										NaN												NaN				NaN											True					True					True											NaN				NaN			NaN				NaN			NaN										NaN									NaN
+Confounding_of_bio_and_batch_variance			True													NaN				NaN											NaN			True					NaN										NaN												NaN				NaN												NaN						NaN						NaN											NaN				NaN			NaN				NaN			NaN										NaN									NaN
+Top_method_for_trajectories				NaN												True				NaN										True			True					NaN										NaN												NaN				NaN												NaN						NaN						NaN											NaN				NaN			NaN				NaN			NaN										NaN									NaN
+Fast_method_for_quick_results				NaN													NaN				NaN											NaN				NaN					NaN										NaN												NaN			True												NaN					True						NaN											NaN				NaN			NaN				NaN			NaN										NaN									NaN
+Scales_well_to_large_datasets_on_CPU			True													NaN			True											NaN				NaN					NaN										NaN												NaN			True												NaN						NaN						NaN											NaN				NaN			NaN				NaN			NaN										NaN									NaN
+Method_has_GPU_support			True													NaN			True											NaN			True					NaN										NaN												NaN				NaN												NaN						NaN						NaN											NaN			True			NaN			True			NaN									True								True
+Scales_well_to_feature_spaces_beyond_genes				NaN													NaN				NaN											NaN				NaN					NaN										NaN												NaN				NaN												NaN						NaN						NaN											NaN			True		True				NaN			NaN										NaN									NaN
+Method_shows_corrected_expression				NaN													NaN				NaN											NaN			True					NaN									True											True				NaN											True					True					True										True				NaN			NaN				NaN			NaN										NaN								True
