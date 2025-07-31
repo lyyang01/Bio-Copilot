@@ -24,3 +24,10 @@ Bio-Copilot is a project that provides an available multi-agent system for large
 
 ## Usage
 code and usage will be updated in this week.
+
+## UI
+The ui of Bio-Copilot is shown as the following:
+<div align=center>
+<img src="assets/demo.jpg" width = "540" alt="mas" align=center />
+</div>
+
