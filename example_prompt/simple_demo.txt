@@ -1,0 +1,1 @@
+Perform atlas-level integration of lung data with scANVI.\n\nDataset location:\n- Input data: '/data/yangliu/agent-benchmark/agent_benchmark/lung_atlas.h5ad'
