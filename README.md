@@ -32,9 +32,17 @@ In the codebase, main_biocopilot.py is the primary entry point. The groupchats d
 
 We hope this open-source release will assist researchers who extend or study agent systems built on AutoGEN.
 
-## UI
-The ui of Bio-Copilot is shown as the following:
-<div align=center>
-<img src="assets/demo.jpg" width = "540" alt="mas" align=center />
-</div>
+## Quick Start
 
+We add a demo prompt in "example_prompt/simple_demo.txt". 
+
+First, please config LLM in "biocopilot/config.py".
+
+Second, run the Bio-Copilot based on the chainlit visual interface.
+
+Third, use the prompt in the simple_demo.txt as the user input.
+
+## Demo
+A simple demo of Bio-Copilot is shown as the following:
+<video src="[https://github.com/<用户名>/<仓库>/releases/download/v1.0.0/demo.mp4](https://github.com/lyyang01/Bio-Copilot/releases/download/v1.0.0/demo.mp4)" 
+       controls="controls" width="100%" muted></video>
