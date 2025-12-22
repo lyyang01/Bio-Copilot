@@ -44,5 +44,5 @@ Third, use the prompt in the simple_demo.txt as the user input.
 
 ## Demo
 A simple demo of Bio-Copilot is shown as the following:
-<video src="[https://github.com/<用户名>/<仓库>/releases/download/v1.0.0/demo.mp4](https://github.com/lyyang01/Bio-Copilot/releases/download/v1.0.0/demo.mp4)" 
+<video src="https://github.com/lyyang01/Bio-Copilot/releases/download/v1.0.0/demo.mp4" 
        controls="controls" width="100%" muted></video>
