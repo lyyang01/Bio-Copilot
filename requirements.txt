@@ -1,9 +1,12 @@
 python==3.11.7
-chainlit==1.0.400
 pyautogen==0.2.27
+pyautogen[retrievechat]==0.2.27
 openai==1.47.0
 jupyter==1.0.0
-httpx==0.23.0
+httpx==0.27.2
 jupyterlab==4.0.12
 notebook==7.0.8
 jupyter_kernel_gateway==3.0.1
+pydantic==2.7.0
+scvi-tools==1.3.0
+chainlit==1.0.400
