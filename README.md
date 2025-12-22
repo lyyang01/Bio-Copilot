@@ -34,7 +34,7 @@ We hope this open-source release will assist researchers who extend or study age
 
 ## Quick Start
 
-We add a demo prompt in "example_prompt/simple_demo.txt". 
+We add a demo prompt in "example_prompt/simple_demo.txt".
 
 First, please config LLM in "biocopilot/config.py".
 
@@ -42,7 +42,10 @@ Second, run the Bio-Copilot based on the chainlit visual interface.
 
 Third, use the prompt in the simple_demo.txt as the user input.
 
-## Demo
-A simple demo of Bio-Copilot is shown as the following:
-<video src="https://github.com/lyyang01/Bio-Copilot/releases/download/v1.0.0/demo.mp4" 
-       controls="controls" width="100%" muted></video>
+## UI and Demo
+UI of Bio-Copilot is shown as the following:
+<div align=center>
+<img src="assets/demo.jpg" width = "780" alt="mas" align=center />
+</div>
+
+A simple video demo of Bio-Copilot can be download in: https://github.com/lyyang01/Bio-Copilot/releases/download/v1.0.0/demo.mp4
