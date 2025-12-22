@@ -34,7 +34,7 @@ We hope this open-source release will assist researchers who extend or study age
 
 ## Quick Start
 
-We add a demo prompt in "example_prompt/simple_demo.txt".
+We add a demo prompt in "example_prompt/simple_demo.txt". The dataset used in the simple demo can be found in: https://drive.google.com/file/d/1RkkPVPVXfW9Nuv-HaQQh0Ldv9WrfzrUa/view?usp=share_link
 
 First, please config LLM in "biocopilot/config.py".
 
